@@ -9,20 +9,25 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Java compiler versions and project encoding -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versions for reporting and aspect-oriented programming tools -->
         <aspectj.version>1.9.7</aspectj.version>
         <allure.version>2.21.0</allure.version>
     </properties>
 
     <dependencies>
+        <!-- Selenium: Main framework for web browser automation -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.10.0</version>
         </dependency>
 
+        <!-- TestNG: Testing framework to organize and run test cases -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -30,12 +35,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Allure TestNG: Integration for generating rich test reports -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.version}</version>
         </dependency>
 
+        <!-- WebDriverManager: Automatically manages browser drivers (like chromedriver) -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -45,16 +52,19 @@
 
     <build>
         <plugins>
+            <!-- Surefire Plugin: Responsible for executing tests during the build lifecycle -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M8</version>
                 <configuration>
                     <argLine>
+                        <!-- AspectJ weaver agent: Required for Allure to intercept test steps for reporting -->
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                 </configuration>
                 <dependencies>
+                    <!-- Plugin dependency for AspectJ -->
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
