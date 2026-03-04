@@ -50,6 +50,11 @@ public class BaseTest {
         driver.get("https://www.keflahayot.co.il/");
     }
 
+    // Getter method to provide access to the WebDriver instance for test classes that extend BaseTest
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     @AfterMethod
     public void tearDown() {
         // Close the browser session after each test
