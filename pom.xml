@@ -62,6 +62,10 @@
                         <!-- AspectJ weaver agent: Required for Allure to intercept test steps for reporting -->
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <!-- Defines the output directory where Allure will save the raw test execution results (JSON files) -->
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <!-- Plugin dependency for AspectJ -->

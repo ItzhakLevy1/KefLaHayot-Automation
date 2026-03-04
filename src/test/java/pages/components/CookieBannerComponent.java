@@ -1,5 +1,6 @@
 package pages.components;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +28,7 @@ public class CookieBannerComponent {
     }
 
     // Method to accept cookies by clicking the accept button on the banner
+    @Step("Accepting cookies and waiting for banner to disappear")
     public void acceptCookies() {
         try {
             WebElement button = wait.until(ExpectedConditions.elementToBeClickable(cookieAcceptBtn));
@@ -37,6 +39,7 @@ public class CookieBannerComponent {
     }
 
     // Method to check if the cookie banner is currently visible on the page
+    @Step("Checking if cookie banner is visible")
     public boolean isCookieBannerVisible() {
         try {
             return driver.findElement(cookieBanner).isDisplayed();
