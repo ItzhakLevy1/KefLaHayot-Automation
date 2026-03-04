@@ -7,35 +7,55 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.time.Duration;
 
 public class BaseTest {
     protected WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
-        // English comment: Initialize Chrome driver using WebDriverManager
-        WebDriverManager.chromedriver().setup();
+        // Initialize Chrome driver using WebDriverManager, "clearDriverCache" Forces WebDriverManager to download the latest matching driver
+        WebDriverManager.chromedriver().clearDriverCache().setup();
 
-        // English comment: Configure Chrome options (e.g., start maximized)
+        // Configure Chrome options (e.g., start maximized)
         ChromeOptions options = new ChromeOptions();
+
+        // Opens the browser window in full-screen mode upon startup
         options.addArguments("--start-maximized");
+
+        // Bypasses CORS policy issues (common in Chrome 111+ to allow communication with the driver)
         options.addArguments("--remote-allow-origins=*");
+
+        // Runs the browser in Incognito mode (private browsing, no cookies/history saved)
+        options.addArguments("--incognito");
+
+        // Block web push notification pop-ups from websites
+        options.addArguments("--disable-notifications");
+
+        // Prevents Chrome from showing the "Save Password" prompt
+        options.addArguments("--disable-save-password-bubble");
+
+        // Disables the feature that checks if your passwords were part of a data leak
+        options.addArguments("--disable-features=PasswordLeakDetection");
+
+        // Removes the "Chrome is being controlled by automated test software" notification bar
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+
+        // Disables the automation extension that Chrome normally loads during testing
+        options.setExperimentalOption("useAutomationExtension", false);
+
 
         driver = new ChromeDriver(options);
 
-        // English comment: Define implicit wait for general element discovery
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        // English comment: Navigate to the target website
+        // Navigate to the target website
         driver.get("https://www.keflahayot.co.il/");
     }
 
     @AfterMethod
     public void tearDown() {
-        // English comment: Close the browser session after each test
+        // Close the browser session after each test
         if (driver != null) {
             driver.quit();
         }
+        driver = null;
     }
 }

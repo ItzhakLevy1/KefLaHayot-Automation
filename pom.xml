@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>KefLaHayot_Automation</artifactId>
+    <artifactId>kef-la-hayot-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.10.0</version>
+            <version>4.25.0</version>
         </dependency>
 
         <!-- TestNG: Testing framework to organize and run test cases -->
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.3</version>
+            <version>5.9.2</version>
         </dependency>
     </dependencies>
 
