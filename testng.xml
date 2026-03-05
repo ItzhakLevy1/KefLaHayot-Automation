@@ -9,7 +9,7 @@
 
     <test name="Regression Tests">
         <classes>
-            <class name="tests.CookiesBannerTests"/>
+            <class name="tests.MyOrdersTests"/>
         </classes>
     </test>
 </suite>
