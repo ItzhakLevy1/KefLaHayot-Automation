@@ -1,17 +1,17 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 
 public class CookiesBannerTests extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @Description("Verify cookie banner persistence across page navigation")
+    @Feature("Global UI Components")
+    @Owner("Itzhak Levy")
+    @Description("TC-01: Verify cookie banner persistence across page navigation")
     public void testCookieBannerPersistence() {
         HomePage homePage = new HomePage(driver);
 

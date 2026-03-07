@@ -1,12 +1,12 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utils.AllureAttachments;
 import utils.HighlightUtils;
-import io.qameta.allure.Description;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 
@@ -15,6 +15,9 @@ import java.time.Duration;
 public class MyOrdersTests extends BaseTest {
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Feature("Navigation Menu")
+    @Owner("Itzhak Levy")
     @Description("TC-02: Verify 'My Orders' button is intercepted by Dropdown menu after login")
     public void testMyOrdersClickIntercepted() {
 

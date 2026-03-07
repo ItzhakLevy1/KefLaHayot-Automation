@@ -1,14 +1,17 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import io.qameta.allure.Description;
 
 public class LogoutTests extends BaseTest {
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Feature("User Authentication")
+    @Owner("Itzhak Levy")
     @Description("TC-04: Verify UI inconsistency - multiple logout options with different labels")
     public void testDuplicateLogoutButtons() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);

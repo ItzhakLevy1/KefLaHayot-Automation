@@ -28,6 +28,9 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Feature("Registration Logic")
+    @Owner("Itzhak Levy")
     @Description("TC-06: Verify registration validation bug - system allows signup without accepting terms")
     public void testRegistrationWithoutTerms() throws InterruptedException {
         RegistrationPage registrationPage = new RegistrationPage(driver);
@@ -70,6 +73,9 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Feature("Registration Logic")
+    @Owner("Itzhak Levy")
     @Description("TC-07: Verify system allows registration with a phone number that already exists")
     public void testDuplicatePhoneRegistration() throws InterruptedException {
         RegistrationPage registrationPage = new RegistrationPage(driver);
