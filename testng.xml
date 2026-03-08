@@ -10,6 +10,9 @@
     <test name="Single Bug Test">
         <classes>
             <class name="tests.AboutTests">
+                    <methods>
+                        <include name="AboutEmailAsteriskPositionTest"/>
+                    </methods>
             </class>
         </classes>
     </test>

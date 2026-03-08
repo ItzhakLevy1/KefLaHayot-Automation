@@ -18,6 +18,7 @@ public class AboutPage extends BasePage{
     /*** Locators ***/
 
     private By termsAndCondition = By.cssSelector("[for='terms_agree__tickets_2']");
+    private By myEmailField = By.cssSelector("#ticket_customer_email");
 
     public AboutPage(WebDriver driver) {
 
@@ -39,7 +40,7 @@ public class AboutPage extends BasePage{
 
     @Step("Highlighting Bug 8: Terms contrast issue")
     public void highlightTermsContrast() {
-        scrollToAndHighlight(termsAndCondition);
+        scrollToAndHighlight(myEmailField);
     }
 
 }
