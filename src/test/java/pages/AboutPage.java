@@ -18,7 +18,8 @@ public class AboutPage extends BasePage{
     /*** Locators ***/
 
     private By termsAndCondition = By.cssSelector("[for='terms_agree__tickets_2']");
-    private By myEmailField = By.cssSelector("#ticket_customer_email");
+    private By astriskEmailField = By.cssSelector("#ticket_customer_email");
+    private By newsLetterField = By.cssSelector("[class='newsletter_field']");
 
     public AboutPage(WebDriver driver) {
 
@@ -40,7 +41,17 @@ public class AboutPage extends BasePage{
 
     @Step("Highlighting Bug 8: Terms contrast issue")
     public void highlightTermsContrast() {
-        scrollToAndHighlight(myEmailField);
+        scrollToAndHighlight(termsAndCondition);
+    }
+
+    @Step("Highlighting Bug 9: Terms contrast issue")
+    public void highlightEmailAsteriskPositionTest() {
+        scrollToAndHighlight(astriskEmailField);
+    }
+
+    @Step("Highlighting Bug 10: Terms contrast issue")
+    public void highlightNewsLetterTest() {
+        scrollToAndHighlight(newsLetterField);
     }
 
 }
