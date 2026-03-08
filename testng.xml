@@ -9,10 +9,7 @@
 
     <test name="Single Bug Test">
         <classes>
-            <class name="tests.RegistrationTests">
-                <methods>
-                    <include name="testRegistrationButtonOverlap"/>
-                </methods>
+            <class name="tests.AboutTests">
             </class>
         </classes>
     </test>
