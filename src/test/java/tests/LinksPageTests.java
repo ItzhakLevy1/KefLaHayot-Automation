@@ -11,7 +11,7 @@ public class LinksPageTests extends BaseTest{
     private LinksPage linksPage;
 
     @Test
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Feature("Links page UI")
     @Owner("Itzhak Levy")
     @Description("TC-12: page With Empty Section")

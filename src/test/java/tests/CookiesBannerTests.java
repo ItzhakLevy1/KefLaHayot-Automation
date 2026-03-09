@@ -8,7 +8,7 @@ import pages.HomePage;
 public class CookiesBannerTests extends BaseTest {
 
     @Test
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.MINOR)
     @Feature("Global UI Components")
     @Owner("Itzhak Levy")
     @Description("TC-01: Verify cookie banner persistence across page navigation")

@@ -15,7 +15,7 @@ import java.time.Duration;
 public class MyOrdersTests extends BaseTest {
 
     @Test
-    @Severity(SeverityLevel.MINOR)
+    @Severity(SeverityLevel.CRITICAL )
     @Feature("Navigation Menu")
     @Owner("Itzhak Levy")
     @Description("TC-02: Verify 'My Orders' button is intercepted by Dropdown menu after login")

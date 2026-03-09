@@ -9,7 +9,7 @@ import utils.AllureAttachments;
 public class AboutTests extends BaseTest{
 
     @Test
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.MINOR)
     @Feature("About Page UI") // Classification by feature
     @Owner("Itzhak Levy") // Responsible for this test case
     @Description("TC-08: Verify T&C label has poor color contrast against newsletter background image")
@@ -27,7 +27,7 @@ public class AboutTests extends BaseTest{
     }
 
     @Test
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.TRIVIAL)
     @Feature("About Page UI") // Classification by feature
     @Owner("Itzhak Levy") // Responsible for this test case
     @Description("TC-09: Verify mandatory asterisk position for Email field")

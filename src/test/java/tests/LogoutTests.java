@@ -9,7 +9,7 @@ import pages.LoginPage;
 public class LogoutTests extends BaseTest {
 
     @Test
-    @Severity(SeverityLevel.MINOR)
+    @Severity(SeverityLevel.TRIVIAL)
     @Feature("User Authentication")
     @Owner("Itzhak Levy")
     @Description("TC-04: Verify UI inconsistency - multiple logout options with different labels")

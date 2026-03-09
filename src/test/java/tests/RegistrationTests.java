@@ -28,7 +28,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Feature("Registration Logic")
     @Owner("Itzhak Levy")
     @Description("TC-06: Verify registration validation bug - system allows signup without accepting terms")
