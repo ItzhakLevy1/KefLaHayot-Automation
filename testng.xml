@@ -11,7 +11,7 @@
         <classes>
             <class name="tests.LinksPageTests">
                     <methods>
-                        <include name="pageWithEmptySection"/>
+                        <include name="takeZoomedScreenshot"/>
                     </methods>
             </class>
         </classes>
