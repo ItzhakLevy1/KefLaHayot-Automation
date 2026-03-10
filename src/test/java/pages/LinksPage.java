@@ -12,6 +12,9 @@ public class LinksPage extends BasePage{
     // Locators
     private By ptvStore = By.xpath("//a[contains(normalize-space(), 'חנות חיות בפתח תקווה')]");
     private By emptySection = By.cssSelector(".categoriesstrength");
+    private By deliveryPageContent = By.cssSelector(".bg_layout_middle");
+
+
 
     // Constructor
     public LinksPage(WebDriver driver) {
@@ -37,5 +40,13 @@ public class LinksPage extends BasePage{
     public void highlightEmptyPTVStoreSection(){
         cookieBanner.acceptCookies();
         scrollToAndHighlight(emptySection);
+    }
+
+    // Highlight entire delivery page content
+    @Step
+    public void highlightDeliveryPageContent(){
+        WebElement deliveryPContent = driver.findElement(deliveryPageContent);
+        cookieBanner.acceptCookies();
+        HighlightUtils.highlightElement(driver, deliveryPContent);
     }
 }
