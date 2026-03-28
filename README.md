@@ -7,7 +7,9 @@ The highlight of this project is the discovery of 13 significant bugs, including
 📊 Project Insights & Presentation
 [!IMPORTANT]
 > **[📊 Click here to view the Interactive Project Presentation (STR)](https://docs.google.com/presentation/d/e/2PACX-1vTOF0UBZ5-NZYzlSUIyLPEaatsvW49CcG2ed1wF7Y3-O2SgaMuk_LUQ-zeYnDGO3-jr_kpn8P363piL/pub?start=true&loop=false&delayms=10000&slide=id.p)**
-Click here to view the Interactive Project Presentation (STR)
+
+> **[📊 Click here to view the Interactive Project Video Demo (STR)](https://www.canva.com/design/DAHDwmFgX7s/S8T6Vkwk4g0_rniwiU45IQ/watch?utm_content=DAHDwmFgX7s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb7d1ac700b)**
+
 Includes full bug analysis, risk assessment, and the final GO/NO-GO decision.
 
 🚀 Key Features & Architecture
